@@ -2,7 +2,8 @@
 FROM python:3.12-slim
 
 # Upgrade pip and system packages to reduce vulnerabilities
-RUN apt-get update && apt-get upgrade -y && pip install --upgrade pip && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get upgrade -y \ 
+    && pip install --upgrade pip && rm -rf /var/lib/apt/lists/*
 
 # Set work directory
 WORKDIR /app
